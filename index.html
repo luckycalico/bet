@@ -12,24 +12,7 @@
             background-color: #f4f4f4;
         }
 
-        /* Banner Styles */
-        #banner-container {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            max-height: 300px; /* Adjust the height as needed */
-        }
-
-        .banners-wrapper {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .banner {
-            flex: 0 0 100%;
-            max-width: 100%;
-            height: auto;
-        }
+        /* 在此保留您的 CSS 样式 */
 
         /* Introduction and Buttons Styles */
         #intro {
@@ -38,28 +21,14 @@
             background-color: #ffffff;
         }
 
-        #buttons {
-            text-align: center;
-            margin: 20px;
+        #intro h2 {
+            white-space: nowrap; /* 防止标题换行 */
+            overflow: hidden; /* 隐藏溢出的部分 */
+            text-overflow: ellipsis; /* 用省略号表示溢出的文本 */
         }
 
-        .button {
-            padding: 10px 20px;
-            margin: 10px;
-            font-size: 16px;
-            text-decoration: none;
-            color: #ffffff;
-            background-color: #888888; /* Change background color to gray */
-            border-radius: 5px;
-            display: inline-block;
-        }
-
-        #image {
-            width: 100%;
-            max-width: 600px; /* Set the maximum width as needed */
-            height: auto;
-            display: block;
-            margin: 20px auto;
+        #intro p {
+            white-space: normal; /* 允许段落文本换行 */
         }
 
         #advertisement {
@@ -68,43 +37,20 @@
             background-color: #ffffff;
         }
 
-        /* Reviews Styles */
-        #reviews {
-            text-align: center;
-            padding: 20px;
-            background-color: #ffffff;
-        }
-
-        .review {
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            width: 70%; /* 控制评论块的宽度 */
-            box-sizing: border-box;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .review img {
-            border-radius: 50%;
-            max-width: 50px;
-            max-height: 50px;
-            margin-right: 10px;
-        }
-
-        .review-content {
-            margin-top: 10px;
+        #advertisement p {
+            white-space: normal; /* 允许广告语文本换行 */
         }
 
         /* Media query for smaller screens (e.g., phones) */
         @media only screen and (max-width: 600px) {
-            .banners-wrapper {
-                flex: 0 0 300%; /* Adjust the factor according to the number of banners */
+            #intro h2 {
+                white-space: normal; /* 允许标题文本换行 */
+                overflow: visible; /* 显示溢出的部分 */
+                text-overflow: clip; /* 显示所有文本，不用省略号 */
             }
 
-            .button {
-                width: 80%;
+            #advertisement p {
+                white-space: normal; /* 允许广告语文本换行 */
             }
         }
     </style>
