@@ -5,7 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website</title>
     <style>
-        /* 在此保留您的 CSS 样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Banner Styles */
+        #banner-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-height: 300px; /* 调整高度 */
+        }
+
+        .banners-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .banner {
+            flex: 0 0 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Introduction and Buttons Styles */
+        #intro {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+
+        #intro h2 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        #intro p {
+            white-space: normal;
+        }
+
+        #buttons {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #888888;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        #image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        #advertisement {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+
+        #advertisement p {
+            white-space: normal;
+        }
 
         /* Reviews Styles */
         #reviews {
@@ -19,7 +94,7 @@
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
-            width: 70%; /* 控制评论块的宽度 */
+            width: 70%;
             box-sizing: border-box;
             display: block;
             margin: 0 auto;
@@ -39,7 +114,7 @@
         /* Media query for smaller screens (e.g., phones) */
         @media only screen and (max-width: 600px) {
             .banners-wrapper {
-                flex: 0 0 300%; /* Adjust the factor according to the number of banners */
+                flex: 0 0 300%;
             }
 
             .button {
@@ -127,5 +202,4 @@
     </script>
 
 </body>
-
 </html>
