@@ -20,11 +20,15 @@
             max-height: 300px; /* Adjust the height as needed */
         }
 
+        .banners-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
         .banner {
-            width: 100%;
+            flex: 0 0 100%;
             max-height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease-in-out;
         }
 
         /* Introduction and Buttons Styles */
@@ -94,14 +98,8 @@
 
         /* Media query for smaller screens (e.g., phones) */
         @media only screen and (max-width: 600px) {
-            .banner {
-                display: block;
-            }
-
-            .button {
-                display: block;
-                width: 80%;
-                margin: 10px auto;
+            .banners-wrapper {
+                flex: 0 0 300%; /* Adjust the factor according to the number of banners */
             }
         }
     </style>
@@ -110,9 +108,11 @@
 
 <!-- Banner Section -->
 <div id="banner-container">
-    <img class="banner" src="banner1.jpg" alt="Banner 1">
-    <img class="banner" src="banner2.jpg" alt="Banner 2">
-    <img class="banner" src="banner3.jpg" alt="Banner 3">
+    <div class="banners-wrapper">
+        <img class="banner" src="banner1.jpg" alt="Banner 1">
+        <img class="banner" src="banner2.jpg" alt="Banner 2">
+        <img class="banner" src="banner3.jpg" alt="Banner 3">
+    </div>
 </div>
 
 <!-- Introduction and Buttons Section -->
@@ -122,9 +122,9 @@
 </div>
 
 <div id="buttons">
-    <a href="your-app.apk" class="button">APK下载</a>
-    <a href="https://example.com" class="button">跳转其他网站</a>
-    <a href="mailto:info@example.com" class="button">联系我们</a>
+    <a href="LuckyBET_1_1.0.apk" class="button">Download APK</a>
+    <a href="https://www.luckycalico.ph/m/home?affiliateCode=lucky" class="button">Free Trial</a>
+    <a href="mailto:cruz.michael.sosa@gmail.com" class="button">Contact Us</a>
 </div>
 
 <img id="image" src="your-image.jpg" alt="Your Image">
@@ -187,10 +187,8 @@
     const banners = document.querySelectorAll('.banner');
 
     function showBanner(index) {
-        banners.forEach((banner, i) => {
-            const offset = (i - index) * 100;
-            banner.style.transform = `translateX(${offset}%)`;
-        });
+        const offset = -index * 100;
+        document.querySelector('.banners-wrapper').style.transform = `translateX(${offset}%)`;
     }
 
     function nextBanner() {
