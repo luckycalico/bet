@@ -27,8 +27,8 @@
 
         .banner {
             flex: 0 0 100%;
-            max-height: 100%;
-            object-fit: cover;
+            max-width: 100%;
+            height: auto;
         }
 
         /* Introduction and Buttons Styles */
@@ -100,6 +100,10 @@
         @media only screen and (max-width: 600px) {
             .banners-wrapper {
                 flex: 0 0 300%; /* Adjust the factor according to the number of banners */
+            }
+
+            .button {
+                width: 80%;
             }
         }
     </style>
