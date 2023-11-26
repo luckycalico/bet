@@ -12,6 +12,7 @@
             background-color: #f4f4f4;
         }
 
+        /* Banner Styles */
         #banner-container {
             position: relative;
             overflow: hidden;
@@ -19,15 +20,14 @@
             max-height: 300px; /* Adjust the height as needed */
         }
 
-       .banner {
-    display: none;
-    width: 100%;
-    max-height: 300px; /* 调整这里的值，以确保图片不会过大 */
-    object-fit: contain;
-}
-
+        .banner {
+            display: none;
+            width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
+        /* Introduction and Buttons Styles */
         #intro {
             text-align: center;
             padding: 20px;
@@ -45,7 +45,7 @@
             font-size: 16px;
             text-decoration: none;
             color: #ffffff;
-            background-color: #3498db;
+            background-color: #888888; /* Change background color to gray */
             border-radius: 5px;
             display: inline-block;
         }
@@ -63,29 +63,45 @@
             background-color: #ffffff;
         }
 
-        /* Media query for smaller screens (e.g., phones) */
-        @media only screen and (max-width: 600px) {
-            #buttons {
-                text-align: center;
-                margin: 20px;
-            }
+        /* Reviews Styles */
+        #reviews {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+        }
 
-            .button {
-                display: block;
-                width: 80%;
-                margin: 10px auto;
-            }
+        .review {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: inline-block;
+            width: 45%;
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+
+        .review img {
+            border-radius: 50%;
+            max-width: 50px;
+            max-height: 50px;
+        }
+
+        .review-content {
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
+<!-- Banner Section -->
 <div id="banner-container">
     <img class="banner" src="banner1.jpg" alt="Banner 1">
     <img class="banner" src="banner2.jpg" alt="Banner 2">
     <img class="banner" src="banner3.jpg" alt="Banner 3">
 </div>
 
+<!-- Introduction and Buttons Section -->
 <div id="intro">
     <h2>自我介绍</h2>
     <p>在这里写下你的自我介绍内容。</p>
@@ -103,32 +119,53 @@
     <p>在线游戏广告语：在这里写下你的广告语。</p>
 </div>
 
-<script>
-    // JavaScript代码用于实现轮播效果
-    let currentBanner = 0;
-    const banners = document.querySelectorAll('.banner');
+<!-- Reviews Section -->
+<div id="reviews">
+    <div class="review">
+        <img src="avatar1.jpg" alt="User 1">
+        <div class="review-content">
+            <p><strong>John Doe</strong></p>
+            <p>This app is amazing! I love it. Highly recommended!</p>
+            <p>👍 15</p>
+        </div>
+    </div>
 
-    function showBanner(index) {
-        banners.forEach((banner, i) => {
-            if (i === index) {
-                banner.style.display = 'block';
-            } else {
-                banner.style.display = 'none';
-            }
-        });
-    }
+    <div class="review">
+        <img src="avatar2.jpg" alt="User 2">
+        <div class="review-content">
+            <p><strong>Jane Smith</strong></p>
+            <p>Easy to use and very helpful. Great job!</p>
+            <p>👍 10</p>
+        </div>
+    </div>
 
-    function nextBanner() {
-        currentBanner = (currentBanner + 1) % banners.length;
-        showBanner(currentBanner);
-    }
+    <div class="review">
+        <img src="avatar3.jpg" alt="User 3">
+        <div class="review-content">
+            <p><strong>Mike Johnson</strong></p>
+            <p>Could be better. Needs some improvements.</p>
+            <p>👍 5</p>
+        </div>
+    </div>
 
-    // 自动轮播，每隔5秒切换一次
-    setInterval(nextBanner, 5000);
+    <div class="review">
+        <img src="avatar4.jpg" alt="User 4">
+        <div class="review-content">
+            <p><strong>Sarah Brown</strong></p>
+            <p>Excellent app! Can't live without it now.</p>
+            <p>👍 20</p>
+        </div>
+    </div>
 
-    // 初始显示第一张banner
-    showBanner(currentBanner);
-</script>
+    <div class="review">
+        <img src="avatar5.jpg" alt="User 5">
+        <div class="review-content">
+            <p><strong>Chris Lee</strong></p>
+            <p>Very user-friendly. I use it every day.</p>
+            <p>👍 12</p>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
