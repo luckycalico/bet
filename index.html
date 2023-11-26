@@ -12,19 +12,20 @@
             background-color: #f4f4f4;
         }
 
-       /* Banner Styles */
-#banner-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-height: 300px; /* Adjust the height as needed */
-}
+        /* Banner Styles */
+        #banner-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-height: 300px; /* Adjust the height as needed */
+        }
 
-.banner {
-    width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
+        .banner {
+            width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: none;
+        }
 
         /* Introduction and Buttons Styles */
         #intro {
@@ -66,7 +67,7 @@
         #reviews {
             text-align: center;
             padding: 20px;
-            background-color: #fff0ff;
+            background-color: #ffffff;
         }
 
         .review {
@@ -90,6 +91,19 @@
         .review-content {
             margin-top: 10px;
         }
+
+        /* Media query for smaller screens (e.g., phones) */
+        @media only screen and (max-width: 600px) {
+            .banner {
+                display: block;
+            }
+
+            .button {
+                display: block;
+                width: 80%;
+                margin: 10px auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -108,9 +122,9 @@
 </div>
 
 <div id="buttons">
-    <a href="LuckyBET_1_1.0.apk" class="button">Download apk</a>
-    <a href="https://www.luckycalico.ph/m/home?affiliateCode=lucky" class="button">Free Trial</a>
-    <a href="mailto: cruz.michael.sosa@gmail.com" class="button">Send Email</a>
+    <a href="your-app.apk" class="button">APK下载</a>
+    <a href="https://example.com" class="button">跳转其他网站</a>
+    <a href="mailto:info@example.com" class="button">联系我们</a>
 </div>
 
 <img id="image" src="your-image.jpg" alt="Your Image">
@@ -166,6 +180,33 @@
         </div>
     </div>
 </div>
+
+<script>
+    // JavaScript代码用于实现轮播效果
+    let currentBanner = 0;
+    const banners = document.querySelectorAll('.banner');
+
+    function showBanner(index) {
+        banners.forEach((banner, i) => {
+            if (i === index) {
+                banner.style.display = 'block';
+            } else {
+                banner.style.display = 'none';
+            }
+        });
+    }
+
+    function nextBanner() {
+        currentBanner = (currentBanner + 1) % banners.length;
+        showBanner(currentBanner);
+    }
+
+    // 自动轮播，每隔5秒切换一次
+    setInterval(nextBanner, 5000);
+
+    // 初始显示第一张banner
+    showBanner(currentBanner);
+</script>
 
 </body>
 </html>
