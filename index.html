@@ -1,87 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        /* Banner Styles */
-        #banner-container {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            max-height: 300px; /* Adjust the height as needed */
-        }
-
-        .banners-wrapper {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .banner {
-            flex: 0 0 100%;
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Introduction and Buttons Styles */
-        #intro {
-            text-align: center;
-            padding: 20px;
-            background-color: #ffffff;
-        }
-
-        #intro h2 {
-            white-space: nowrap; /* Prevent title from wrapping */
-            overflow: hidden; /* Hide overflow */
-            text-overflow: ellipsis; /* Display an ellipsis (...) to indicate text overflow */
-        }
-
-        #intro p {
-            white-space: normal; /* Allow paragraphs to wrap */
-        }
-
-        #buttons {
-            text-align: center;
-            margin: 20px;
-        }
-
-        .button {
-            padding: 10px 20px;
-            margin: 10px;
-            font-size: 16px;
-            text-decoration: none;
-            color: #ffffff;
-            background-color: #888888; /* Change background color to gray */
-            border-radius: 5px;
-            display: inline-block;
-        }
-
-        #image {
-            width: 100%;
-            max-width: 600px; /* Set the maximum width as needed */
-            height: auto;
-            display: block;
-            margin: 20px auto;
-        }
-
-        #advertisement {
-            text-align: center;
-            padding: 20px;
-            background-color: #ffffff;
-        }
-
-        #advertisement p {
-            white-space: normal; /* Allow advertisement text to wrap */
-        }
+        /* 在此保留您的 CSS 样式 */
 
         /* Reviews Styles */
         #reviews {
@@ -95,7 +19,7 @@
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
-            width: 70%; /* Control the width of the review block */
+            width: 70%; /* 控制评论块的宽度 */
             box-sizing: border-box;
             display: block;
             margin: 0 auto;
@@ -124,7 +48,6 @@
         }
     </style>
 </head>
-
 <body>
 
     <!-- Banner Section -->
@@ -160,7 +83,24 @@
 
     <!-- Reviews Section -->
     <div id="reviews">
-        <!-- 评论内容 -->
+        <div class="review">
+            <img src="user1.jpg" alt="User 1">
+            <div class="review-content">
+                <p><strong>John Doe</strong></p>
+                <p>This is a fantastic website! I enjoyed every moment of it. Highly recommended!</p>
+            </div>
+        </div>
+
+        <div class="review">
+            <img src="user2.jpg" alt="User 2">
+            <div class="review-content">
+                <p><strong>Jane Smith</strong></p>
+                <p>Great service and amazing games. Will definitely come back for more!</p>
+            </div>
+        </div>
+
+        <!-- Add more reviews as needed -->
+
     </div>
 
     <!-- JavaScript Code -->
